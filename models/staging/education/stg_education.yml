@@ -3,6 +3,77 @@ version: 2
 models:
   - name: stg_education
     columns: 
-      - name: id
+      - name: gender
         tests:
           - not_null
+          - accepted_values:
+              values:
+                - female
+                - male
+      - name: ethnic_grp
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - group A
+                - group B
+                - group C
+                - group D
+                - group E
+      - name: parent_edu
+        tests:
+          - not_null
+      - name: lunch_type
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - standard
+                - free/reduced
+      - name: test_prep
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - none
+                - completed
+      - name: parent_marital_status
+        tests:
+          - not_null
+      - name: sport_practise
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - regularly
+                - sometimes
+                - never
+      - name: num_siblings
+        tests:
+          - not_null
+      - name: transport
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - school_bus
+                - private
+      - name: weekly_study
+        tests:
+          - not_null
+      - name: math_score
+        tests:
+          - not_null
+      - name: reading_score
+        tests:
+          - not_null
+      - name: writing_score
+        tests:
+          - not_null
+      
+        
+                
+
+                
+        
+        
