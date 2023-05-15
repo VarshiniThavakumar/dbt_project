@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: education
+    database: raw
+    schema: education
+    tables:
+      - name: edu_data
+        columns:
+          - name: id
+            tests:
+              - not_null
+              
